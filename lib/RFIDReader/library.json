@@ -1,0 +1,13 @@
+{
+  "name": "RFIDReader",
+  "version": "1.0.0",
+  "description": "MFRC522 (RC522/HW-126) NTAG reader running in its own FreeRTOS task; decodes tags and emits app events.",
+  "dependencies": {
+    "Events": "*",
+    "FilamentTag": "*",
+    "TagFormat": "*"
+  },
+  "build": {
+    "flags": ["-I../Events", "-I../FilamentTag", "-I../TagFormat"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "FilamentTag",
+  "version": "1.1.0",
+  "description": "Anycubic filament NTAG21x codec (decode + encode) plus a JSON-backed filament definition database (FilamentDB) with built-in fallback.",
+  "dependencies": {
+    "bblanchon/ArduinoJson": "^7.0.4"
+  }
+}

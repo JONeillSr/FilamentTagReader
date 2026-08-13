@@ -1,0 +1,1221 @@
+{
+ "_comment": "TigerTag ID lookup tables (official TigerTag DB merged for offline use). Brand/material/aspect names map to TigerTag numeric IDs. Materials include recommended temps. Web-editable; unknown brands fall back to Generic 65535 with the name in the tag's custom message.",
+ "generic_brand_id": 65535,
+ "aspect_none_id": 255,
+ "brands": {
+  "Atome3D": 1,
+  "SainSmart": 1068,
+  "Proto-Pasta": 1120,
+  "3DJake": 1421,
+  "Smart Materials 3D": 2517,
+  "Xstrand": 2833,
+  "Hatchbox": 3132,
+  "Conjure": 3575,
+  "FiloAlfa": 3924,
+  "QIDI Tech": 4011,
+  "Owa": 4048,
+  "MatterHackers": 4344,
+  "Landu": 4356,
+  "Valment": 4565,
+  "Filforme": 4700,
+  "Markforged": 6305,
+  "Aliz": 7432,
+  "Extrudr": 7674,
+  "Jayo": 7812,
+  "Fillamentum": 7980,
+  "Fiberlogy": 8182,
+  "GST3D": 8303,
+  "Taulman3D": 8384,
+  "CaiLab": 8496,
+  "NinjaTek": 8586,
+  "SOVB 3D": 8675,
+  "BlueCast": 8756,
+  "Duramic\u00a03D": 8921,
+  "Ice Filaments": 8990,
+  "3D Solutech": 9192,
+  "FDPlast": 9299,
+  "Gizmo Dorks": 9394,
+  "Ziro": 9596,
+  "AMOLEN": 9798,
+  "Filaments.ca": 11379,
+  "3D4Makers": 11429,
+  "InnovateFil": 11501,
+  "MakerBot": 12345,
+  "Forshape": 12498,
+  "Snapmaker": 12635,
+  "RS Pro": 13667,
+  "Jessie (Printed Solid)": 14250,
+  "3D-Fuel": 14982,
+  "Kimya": 15899,
+  "Anycubic": 15962,
+  "PrintoMax 3D": 18629,
+  "CC3D": 19265,
+  "Rosa3D": 19961,
+  "Raise3D": 20523,
+  "Tronxy": 20851,
+  "Spectrum": 22652,
+  "ArianePlast": 23181,
+  "Monoprice": 23456,
+  "Tecbears": 24363,
+  "Formlabs": 26379,
+  "Sovol": 26595,
+  "Creality": 26956,
+  "TAGin3D": 28055,
+  "Polar Filament": 28136,
+  "Eryone": 28940,
+  "KINGROON": 28988,
+  "Yousu": 29045,
+  "IIIDMAX": 29302,
+  "Wondermaker": 31438,
+  "Addnorth": 32348,
+  "Amazon": 32587,
+  "Siraya Tech": 33566,
+  "DEEPLEE": 33594,
+  "Verbatim": 33788,
+  "Push Plastic": 34567,
+  "EconoFil": 34597,
+  "Bambu Lab": 35123,
+  "Zortrax": 35501,
+  "Nobufil": 35857,
+  "Phrozen": 35882,
+  "Tianse": 36702,
+  "Winkle": 37434,
+  "Lotactree": 38533,
+  "GreenGate3D": 39002,
+  "Longer": 39382,
+  "3DXTech": 39652,
+  "OneFil": 41847,
+  "Jamg He": 41932,
+  "UltiMaker": 42911,
+  "NIT": 44630,
+  "Panchroma": 45670,
+  "Atomic Filament": 45678,
+  "AceAddity": 46010,
+  "Overture": 46203,
+  "Prusament": 46392,
+  "Wanhao": 47560,
+  "eSun": 47930,
+  "Gsun3D": 48261,
+  "R3D": 48804,
+  "GIANTARN": 49784,
+  "G3D Pro": 50311,
+  "Polymaker": 50604,
+  "FusRock": 51139,
+  "BASF": 51443,
+  "Sunlu": 51857,
+  "Inland": 51978,
+  "ColorFabb": 52222,
+  "Geeetech": 52467,
+  "Yumi": 52757,
+  "FormFutura": 53043,
+  "Magigoo": 53640,
+  "Lattice Medical": 53856,
+  "Kexcelled": 54112,
+  "Filament\u00a0PM": 55229,
+  "Nanovia": 55763,
+  "Biqu": 55869,
+  "Fiberon": 56780,
+  "Coex 3D": 56789,
+  "FrancoFil": 57209,
+  "ELEGOO": 57632,
+  "IC3D": 58231,
+  "AzureFilm": 58410,
+  "Tinmorry": 58972,
+  "Filamentive": 59597,
+  "Recreus": 60882,
+  "Ambrosia": 62436,
+  "Multicomp Pro": 63024,
+  "Flashforge": 63340,
+  "Generic": 65535
+ },
+ "materials": {
+  "PE-CF": {
+   "id": 18775,
+   "nmin": 175,
+   "nmax": 220,
+   "bmin": 55,
+   "bmax": 60,
+   "dtemp": 80,
+   "dtime": 12
+  },
+  "EVA": {
+   "id": 9691,
+   "nmin": 175,
+   "nmax": 220,
+   "bmin": 55,
+   "bmax": 60,
+   "dtemp": 50,
+   "dtime": 4
+  },
+  "ASA-AF": {
+   "id": 49804,
+   "nmin": 250,
+   "nmax": 280,
+   "bmin": 90,
+   "bmax": 95,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "PETG-rCF": {
+   "id": 7951,
+   "nmin": 240,
+   "nmax": 270,
+   "bmin": 65,
+   "bmax": 70,
+   "dtemp": 70,
+   "dtime": 8
+  },
+  "PET-CF": {
+   "id": 11053,
+   "nmin": 260,
+   "nmax": 290,
+   "bmin": 90,
+   "bmax": 95,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PCTG-CF": {
+   "id": 53890,
+   "nmin": 240,
+   "nmax": 270,
+   "bmin": 70,
+   "bmax": 75,
+   "dtemp": 65,
+   "dtime": 8
+  },
+  "PS": {
+   "id": 18130,
+   "nmin": 220,
+   "nmax": 260,
+   "bmin": 60,
+   "bmax": 100,
+   "dtemp": 75,
+   "dtime": 2
+  },
+  "PLA Marble": {
+   "id": 9456,
+   "nmin": 190,
+   "nmax": 260,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "ASA-CF": {
+   "id": 27676,
+   "nmin": 250,
+   "nmax": 280,
+   "bmin": 90,
+   "bmax": 95,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "PA-GF": {
+   "id": 30594,
+   "nmin": 260,
+   "nmax": 300,
+   "bmin": 40,
+   "bmax": 45,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "TPU-GF": {
+   "id": 58142,
+   "nmin": 200,
+   "nmax": 250,
+   "bmin": 35,
+   "bmax": 40,
+   "dtemp": 75,
+   "dtime": 8
+  },
+  "PPS-CF": {
+   "id": 24270,
+   "nmin": 310,
+   "nmax": 340,
+   "bmin": 110,
+   "bmax": 115,
+   "dtemp": 130,
+   "dtime": 12
+  },
+  "PLA Wood": {
+   "id": 48001,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 60,
+   "dtime": 8
+  },
+  "PEI-1010": {
+   "id": 56527,
+   "nmin": 370,
+   "nmax": 420,
+   "bmin": 150,
+   "bmax": 160,
+   "dtemp": 130,
+   "dtime": 12
+  },
+  "TPC": {
+   "id": 24116,
+   "nmin": 220,
+   "nmax": 245,
+   "bmin": 60,
+   "bmax": 90,
+   "dtemp": 75,
+   "dtime": 8
+  },
+  "PETG HF": {
+   "id": 57469,
+   "nmin": 220,
+   "nmax": 270,
+   "bmin": 70,
+   "bmax": 75,
+   "dtemp": 70,
+   "dtime": 8
+  },
+  "PLA+": {
+   "id": 46591,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "ABS-CF": {
+   "id": 425,
+   "nmin": 240,
+   "nmax": 280,
+   "bmin": 85,
+   "bmax": 90,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "PP-GF": {
+   "id": 42962,
+   "nmin": 220,
+   "nmax": 250,
+   "bmin": 55,
+   "bmax": 60,
+   "dtemp": 60,
+   "dtime": 4
+  },
+  "PCTPE": {
+   "id": 27268,
+   "nmin": 235,
+   "nmax": 245,
+   "bmin": 50,
+   "bmax": 55,
+   "dtemp": 90,
+   "dtime": 3
+  },
+  "PA": {
+   "id": 59328,
+   "nmin": 240,
+   "nmax": 280,
+   "bmin": 100,
+   "bmax": 105,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PETP": {
+   "id": 18703,
+   "nmin": 220,
+   "nmax": 260,
+   "bmin": 90,
+   "bmax": 95,
+   "dtemp": 70,
+   "dtime": 8
+  },
+  "TPE": {
+   "id": 33958,
+   "nmin": 210,
+   "nmax": 260,
+   "bmin": 45,
+   "bmax": 60,
+   "dtemp": 65,
+   "dtime": 8
+  },
+  "PLA-CF": {
+   "id": 48310,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 60,
+   "dtime": 8
+  },
+  "ASA-AERO": {
+   "id": 31011,
+   "nmin": 240,
+   "nmax": 280,
+   "bmin": 95,
+   "bmax": 100,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "PE": {
+   "id": 27635,
+   "nmin": 175,
+   "nmax": 220,
+   "bmin": 55,
+   "bmax": 60,
+   "dtemp": 0,
+   "dtime": 0
+  },
+  "PMMA": {
+   "id": 42623,
+   "nmin": 240,
+   "nmax": 265,
+   "bmin": 100,
+   "bmax": 110,
+   "dtemp": 80,
+   "dtime": 4
+  },
+  "PLA High Speed": {
+   "id": 24629,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "None": {
+   "id": 65535,
+   "nmin": 0,
+   "nmax": 0,
+   "bmin": 0,
+   "bmax": 0,
+   "dtemp": 0,
+   "dtime": 0
+  },
+  "PC-ABS": {
+   "id": 3368,
+   "nmin": 240,
+   "nmax": 290,
+   "bmin": 90,
+   "bmax": 95,
+   "dtemp": 85,
+   "dtime": 8
+  },
+  "POM": {
+   "id": 50206,
+   "nmin": 230,
+   "nmax": 250,
+   "bmin": 90,
+   "bmax": 110,
+   "dtemp": 75,
+   "dtime": 3
+  },
+  "TPU": {
+   "id": 43518,
+   "nmin": 200,
+   "nmax": 250,
+   "bmin": 35,
+   "bmax": 40,
+   "dtemp": 75,
+   "dtime": 8
+  },
+  "PETG HS": {
+   "id": 7649,
+   "nmin": 220,
+   "nmax": 270,
+   "bmin": 70,
+   "bmax": 75,
+   "dtemp": 70,
+   "dtime": 8
+  },
+  "PVB": {
+   "id": 45962,
+   "nmin": 205,
+   "nmax": 225,
+   "bmin": 30,
+   "bmax": 70,
+   "dtemp": 45,
+   "dtime": 8
+  },
+  "PP": {
+   "id": 30884,
+   "nmin": 220,
+   "nmax": 250,
+   "bmin": 55,
+   "bmax": 60,
+   "dtemp": 60,
+   "dtime": 4
+  },
+  "PA-CF": {
+   "id": 39944,
+   "nmin": 260,
+   "nmax": 300,
+   "bmin": 100,
+   "bmax": 105,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PA6-GF": {
+   "id": 1173,
+   "nmin": 260,
+   "nmax": 300,
+   "bmin": 40,
+   "bmax": 45,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PEI-1010-CF": {
+   "id": 62335,
+   "nmin": 370,
+   "nmax": 430,
+   "bmin": 80,
+   "bmax": 100,
+   "dtemp": 150,
+   "dtime": 8
+  },
+  "Biopolymer": {
+   "id": 51007,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 5,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "Castable Resin": {
+   "id": 8394,
+   "nmin": 0,
+   "nmax": 0,
+   "bmin": 0,
+   "bmax": 0,
+   "dtemp": 0,
+   "dtime": 0
+  },
+  "SEBS": {
+   "id": 24115,
+   "nmin": 245,
+   "nmax": 260,
+   "bmin": 70,
+   "bmax": 80,
+   "dtemp": 65,
+   "dtime": 3
+  },
+  "PA6": {
+   "id": 56666,
+   "nmin": 240,
+   "nmax": 280,
+   "bmin": 100,
+   "bmax": 105,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PETG-GF": {
+   "id": 34944,
+   "nmin": 230,
+   "nmax": 270,
+   "bmin": 70,
+   "bmax": 90,
+   "dtemp": 70,
+   "dtime": 8
+  },
+  "ASA-GF": {
+   "id": 35100,
+   "nmin": 250,
+   "nmax": 280,
+   "bmin": 90,
+   "bmax": 95,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "PES": {
+   "id": 51636,
+   "nmin": 340,
+   "nmax": 380,
+   "bmin": 120,
+   "bmax": 140,
+   "dtemp": 120,
+   "dtime": 6
+  },
+  "PETG-PTFE": {
+   "id": 5238,
+   "nmin": 230,
+   "nmax": 255,
+   "bmin": 70,
+   "bmax": 80,
+   "dtemp": 55,
+   "dtime": 6
+  },
+  "ASA+": {
+   "id": 54568,
+   "nmin": 250,
+   "nmax": 280,
+   "bmin": 90,
+   "bmax": 110,
+   "dtemp": 65,
+   "dtime": 8
+  },
+  "PVA": {
+   "id": 9483,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 30,
+   "bmax": 60,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PSU": {
+   "id": 10272,
+   "nmin": 360,
+   "nmax": 400,
+   "bmin": 140,
+   "bmax": 160,
+   "dtemp": 110,
+   "dtime": 4
+  },
+  "ASA": {
+   "id": 12844,
+   "nmin": 240,
+   "nmax": 280,
+   "bmin": 95,
+   "bmax": 100,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "TPI": {
+   "id": 63946,
+   "nmin": 360,
+   "nmax": 390,
+   "bmin": 0,
+   "bmax": 0,
+   "dtemp": 120,
+   "dtime": 24
+  },
+  "PBT": {
+   "id": 55279,
+   "nmin": 235,
+   "nmax": 245,
+   "bmin": 0,
+   "bmax": 0,
+   "dtemp": 75,
+   "dtime": 6
+  },
+  "PVC": {
+   "id": 20073,
+   "nmin": 215,
+   "nmax": 230,
+   "bmin": 80,
+   "bmax": 85,
+   "dtemp": 80,
+   "dtime": 1
+  },
+  "PEI-9085": {
+   "id": 14508,
+   "nmin": 350,
+   "nmax": 390,
+   "bmin": 120,
+   "bmax": 160,
+   "dtemp": 150,
+   "dtime": 12
+  },
+  "SBS": {
+   "id": 21307,
+   "nmin": 195,
+   "nmax": 250,
+   "bmin": 0,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 4
+  },
+  "PPA-CF": {
+   "id": 8504,
+   "nmin": 280,
+   "nmax": 320,
+   "bmin": 100,
+   "bmax": 105,
+   "dtemp": 110,
+   "dtime": 12
+  },
+  "PEEK": {
+   "id": 29815,
+   "nmin": 390,
+   "nmax": 410,
+   "bmin": 130,
+   "bmax": 145,
+   "dtemp": 120,
+   "dtime": 6
+  },
+  "PEKK-CF": {
+   "id": 10122,
+   "nmin": 350,
+   "nmax": 400,
+   "bmin": 120,
+   "bmax": 140,
+   "dtemp": 120,
+   "dtime": 6
+  },
+  "PETG": {
+   "id": 38256,
+   "nmin": 220,
+   "nmax": 270,
+   "bmin": 70,
+   "bmax": 75,
+   "dtemp": 70,
+   "dtime": 8
+  },
+  "PEI-1010-GF": {
+   "id": 38250,
+   "nmin": 380,
+   "nmax": 430,
+   "bmin": 120,
+   "bmax": 160,
+   "dtemp": 150,
+   "dtime": 12
+  },
+  "CoPE": {
+   "id": 12878,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 30,
+   "bmax": 45,
+   "dtemp": 70,
+   "dtime": 6
+  },
+  "PETG-CF": {
+   "id": 55418,
+   "nmin": 240,
+   "nmax": 270,
+   "bmin": 75,
+   "bmax": 80,
+   "dtemp": 70,
+   "dtime": 8
+  },
+  "PC-PBT-GF": {
+   "id": 61563,
+   "nmin": 260,
+   "nmax": 280,
+   "bmin": 90,
+   "bmax": 100,
+   "dtemp": 90,
+   "dtime": 2
+  },
+  "TPS": {
+   "id": 34409,
+   "nmin": 280,
+   "nmax": 290,
+   "bmin": 70,
+   "bmax": 90,
+   "dtemp": 80,
+   "dtime": 24
+  },
+  "PEEK-GF": {
+   "id": 12216,
+   "nmin": 380,
+   "nmax": 420,
+   "bmin": 130,
+   "bmax": 160,
+   "dtemp": 120,
+   "dtime": 6
+  },
+  "PCTG": {
+   "id": 15041,
+   "nmin": 240,
+   "nmax": 270,
+   "bmin": 70,
+   "bmax": 75,
+   "dtemp": 65,
+   "dtime": 8
+  },
+  "PPS": {
+   "id": 46154,
+   "nmin": 300,
+   "nmax": 340,
+   "bmin": 110,
+   "bmax": 115,
+   "dtemp": 130,
+   "dtime": 12
+  },
+  "PEEK-CF": {
+   "id": 48469,
+   "nmin": 380,
+   "nmax": 420,
+   "bmin": 130,
+   "bmax": 160,
+   "dtemp": 120,
+   "dtime": 6
+  },
+  "PEI-9085-GF": {
+   "id": 35377,
+   "nmin": 360,
+   "nmax": 400,
+   "bmin": 120,
+   "bmax": 160,
+   "dtemp": 150,
+   "dtime": 12
+  },
+  "PCL": {
+   "id": 59849,
+   "nmin": 80,
+   "nmax": 140,
+   "bmin": 25,
+   "bmax": 45,
+   "dtemp": 0,
+   "dtime": 0
+  },
+  "PC-CF": {
+   "id": 20588,
+   "nmin": 270,
+   "nmax": 310,
+   "bmin": 100,
+   "bmax": 120,
+   "dtemp": 90,
+   "dtime": 8
+  },
+  "PCTG-GF": {
+   "id": 3481,
+   "nmin": 240,
+   "nmax": 270,
+   "bmin": 70,
+   "bmax": 75,
+   "dtemp": 65,
+   "dtime": 8
+  },
+  "PPA-GF": {
+   "id": 46276,
+   "nmin": 280,
+   "nmax": 320,
+   "bmin": 100,
+   "bmax": 105,
+   "dtemp": 110,
+   "dtime": 12
+  },
+  "PEI-9085-CF": {
+   "id": 41134,
+   "nmin": 360,
+   "nmax": 400,
+   "bmin": 120,
+   "bmax": 160,
+   "dtemp": 150,
+   "dtime": 12
+  },
+  "PET": {
+   "id": 52077,
+   "nmin": 260,
+   "nmax": 290,
+   "bmin": 65,
+   "bmax": 70,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PE-GF": {
+   "id": 1680,
+   "nmin": 220,
+   "nmax": 260,
+   "bmin": 60,
+   "bmax": 80,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "PAHT": {
+   "id": 23080,
+   "nmin": 260,
+   "nmax": 300,
+   "bmin": 90,
+   "bmax": 110,
+   "dtemp": 90,
+   "dtime": 12
+  },
+  "TPU-AMS": {
+   "id": 5733,
+   "nmin": 200,
+   "nmax": 250,
+   "bmin": 35,
+   "bmax": 40,
+   "dtemp": 75,
+   "dtime": 8
+  },
+  "PLA": {
+   "id": 38219,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "PAHT-GF": {
+   "id": 22652,
+   "nmin": 270,
+   "nmax": 310,
+   "bmin": 90,
+   "bmax": 110,
+   "dtemp": 90,
+   "dtime": 12
+  },
+  "PA11-GF": {
+   "id": 6605,
+   "nmin": 270,
+   "nmax": 300,
+   "bmin": 80,
+   "bmax": 100,
+   "dtemp": 80,
+   "dtime": 12
+  },
+  "PET-GF": {
+   "id": 22678,
+   "nmin": 280,
+   "nmax": 300,
+   "bmin": 80,
+   "bmax": 85,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "PA12-GF": {
+   "id": 2053,
+   "nmin": 260,
+   "nmax": 300,
+   "bmin": 40,
+   "bmax": 45,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PA6-CF": {
+   "id": 12264,
+   "nmin": 260,
+   "nmax": 300,
+   "bmin": 40,
+   "bmax": 45,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PA11": {
+   "id": 29272,
+   "nmin": 260,
+   "nmax": 290,
+   "bmin": 80,
+   "bmax": 100,
+   "dtemp": 80,
+   "dtime": 12
+  },
+  "PETG-ESD": {
+   "id": 51861,
+   "nmin": 240,
+   "nmax": 270,
+   "bmin": 65,
+   "bmax": 70,
+   "dtemp": 70,
+   "dtime": 8
+  },
+  "PC-PBT-CF": {
+   "id": 47651,
+   "nmin": 260,
+   "nmax": 280,
+   "bmin": 90,
+   "bmax": 100,
+   "dtemp": 90,
+   "dtime": 2
+  },
+  "ABS": {
+   "id": 20562,
+   "nmin": 240,
+   "nmax": 280,
+   "bmin": 85,
+   "bmax": 90,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "PEKK": {
+   "id": 53970,
+   "nmin": 380,
+   "nmax": 440,
+   "bmin": 120,
+   "bmax": 140,
+   "dtemp": 130,
+   "dtime": 4
+  },
+  "PA11-CF": {
+   "id": 18451,
+   "nmin": 270,
+   "nmax": 300,
+   "bmin": 80,
+   "bmax": 100,
+   "dtemp": 80,
+   "dtime": 12
+  },
+  "PAHT-CF": {
+   "id": 48815,
+   "nmin": 260,
+   "nmax": 300,
+   "bmin": 100,
+   "bmax": 105,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PA12-CF": {
+   "id": 39667,
+   "nmin": 260,
+   "nmax": 300,
+   "bmin": 40,
+   "bmax": 45,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "ABS-GF": {
+   "id": 49074,
+   "nmin": 240,
+   "nmax": 280,
+   "bmin": 85,
+   "bmax": 90,
+   "dtemp": 80,
+   "dtime": 8
+  },
+  "PA12": {
+   "id": 55796,
+   "nmin": 250,
+   "nmax": 290,
+   "bmin": 70,
+   "bmax": 90,
+   "dtemp": 85,
+   "dtime": 12
+  },
+  "PEBA": {
+   "id": 58498,
+   "nmin": 225,
+   "nmax": 250,
+   "bmin": 95,
+   "bmax": 100,
+   "dtemp": 70,
+   "dtime": 3
+  },
+  "PVDF": {
+   "id": 61048,
+   "nmin": 240,
+   "nmax": 265,
+   "bmin": 90,
+   "bmax": 110,
+   "dtemp": 0,
+   "dtime": 0
+  },
+  "HIPS": {
+   "id": 26029,
+   "nmin": 220,
+   "nmax": 270,
+   "bmin": 90,
+   "bmax": 95,
+   "dtemp": 80,
+   "dtime": 6
+  },
+  "PLA+ Silk": {
+   "id": 8345,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "PPA": {
+   "id": 13850,
+   "nmin": 280,
+   "nmax": 320,
+   "bmin": 100,
+   "bmax": 105,
+   "dtemp": 110,
+   "dtime": 12
+  },
+  "PC-PTFE": {
+   "id": 10738,
+   "nmin": 270,
+   "nmax": 290,
+   "bmin": 110,
+   "bmax": 130,
+   "dtemp": 80,
+   "dtime": 4
+  },
+  "PC-PBT": {
+   "id": 4587,
+   "nmin": 260,
+   "nmax": 280,
+   "bmin": 90,
+   "bmax": 100,
+   "dtemp": 90,
+   "dtime": 2
+  },
+  "PHA": {
+   "id": 10187,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 55,
+   "bmax": 60,
+   "dtemp": 50,
+   "dtime": 24
+  },
+  "ABS-AF": {
+   "id": 735,
+   "nmin": 240,
+   "nmax": 290,
+   "bmin": 85,
+   "bmax": 90,
+   "dtemp": 85,
+   "dtime": 8
+  },
+  "SBC": {
+   "id": 28110,
+   "nmin": 220,
+   "nmax": 260,
+   "bmin": 65,
+   "bmax": 70,
+   "dtemp": 45,
+   "dtime": 6
+  },
+  "PP-CF": {
+   "id": 50497,
+   "nmin": 220,
+   "nmax": 250,
+   "bmin": 55,
+   "bmax": 60,
+   "dtemp": 60,
+   "dtime": 4
+  },
+  "PC": {
+   "id": 30458,
+   "nmin": 260,
+   "nmax": 290,
+   "bmin": 110,
+   "bmax": 115,
+   "dtemp": 85,
+   "dtime": 8
+  },
+  "Castable Filament": {
+   "id": 10478,
+   "nmin": 190,
+   "nmax": 220,
+   "bmin": 30,
+   "bmax": 70,
+   "dtemp": 55,
+   "dtime": 12
+  },
+  "TPU High Speed": {
+   "id": 48047,
+   "nmin": 200,
+   "nmax": 250,
+   "bmin": 35,
+   "bmax": 40,
+   "dtemp": 75,
+   "dtime": 8
+  },
+  "PLA-ESD": {
+   "id": 18922,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "PLA-AERO": {
+   "id": 11506,
+   "nmin": 210,
+   "nmax": 260,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "PPSU": {
+   "id": 49152,
+   "nmin": 360,
+   "nmax": 400,
+   "bmin": 140,
+   "bmax": 170,
+   "dtemp": 130,
+   "dtime": 12
+  },
+  "PLA Silk": {
+   "id": 10602,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 45,
+   "bmax": 55,
+   "dtemp": 50,
+   "dtime": 8
+  },
+  "BVOH": {
+   "id": 34049,
+   "nmin": 190,
+   "nmax": 240,
+   "bmin": 55,
+   "bmax": 60,
+   "dtemp": 85,
+   "dtime": 12
+  }
+ },
+ "aspects": {
+  "-": 0,
+  "Clear": 21,
+  "Tricolor": 24,
+  "Glitter": 64,
+  "Translucent": 67,
+  "Glow in the Dark": 91,
+  "Silk": 92,
+  "Lithophane": 97,
+  "Basic": 104,
+  "Wood": 123,
+  "Pearl": 126,
+  "Gloss": 129,
+  "Satin": 134,
+  "Rainbow": 145,
+  "Thermoreactif": 168,
+  "Stone": 173,
+  "Neon": 216,
+  "Pastel": 220,
+  "Metal": 226,
+  "Marble": 232,
+  "Carbon": 238,
+  "Matt": 247,
+  "Bicolor": 252,
+  "None": 255
+ },
+ "diameters": {
+  "1.75": 56,
+  "2.85": 221
+ },
+ "units": {
+  "mg": 10,
+  "g": 21,
+  "kg": 35,
+  "ml": 48,
+  "cl": 62,
+  "L": 79,
+  "m\u00b3": 95,
+  "mm": 112,
+  "cm": 130,
+  "m": 149,
+  "m\u00b2": 170
+ },
+ "material_aliases": {
+  "PLA|High Speed": "PLA High Speed",
+  "PLA|Rapid": "PLA High Speed",
+  "PLA|High Speed Marble": "PLA Marble",
+  "PLA|Marble": "PLA Marble",
+  "PLA|Wood": "PLA Wood",
+  "PLA|Silk": "PLA Silk",
+  "PLA|CF": "PLA-CF",
+  "PLA+/Pro|*": "PLA+",
+  "PLA+/Pro|Silk": "PLA+ Silk",
+  "PLA+/Pro|Silk Dual": "PLA+ Silk",
+  "PLA+/Pro|Silk Triple": "PLA+ Silk",
+  "TPU|High Speed": "TPU High Speed",
+  "PETG|High Speed": "PETG HS",
+  "PETG|Rapid": "PETG HS"
+ },
+ "aspect_aliases": {
+  "Matte": "Matt",
+  "Glow": "Glow in the Dark",
+  "Transparent": "Clear",
+  "CF": "Carbon",
+  "Sparkle": "Glitter",
+  "Galaxy": "Glitter",
+  "Gradient": "Rainbow",
+  "CMYK": "Tricolor",
+  "Silk Dual": "Silk",
+  "Silk Triple": "Silk"
+ }
+}

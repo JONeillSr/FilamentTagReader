@@ -1,0 +1,25 @@
+{
+  "_comment": "Filament definitions for writing Anycubic NTAG21x spool tags. Editable via the web UI. Each material carries extruder/bed temps (min/max C), the SKU string, and the brand. Weights map to a tag length value. Validated on load; if missing or malformed, the firmware falls back to a small built-in default and reports it on /status.",
+  "brand_default": "AC",
+  "weights": {
+    "1 KG":  330,
+    "750 G": 247,
+    "600 G": 198,
+    "500 G": 165,
+    "250 G": 82
+  },
+  "materials": {
+    "ABS":            { "extMin": 220, "extMax": 250, "bedMin": 90,  "bedMax": 100, "sku": "SHABBK-102",  "brand": "AC" },
+    "ASA":            { "extMin": 240, "extMax": 280, "bedMin": 90,  "bedMax": 100, "sku": "",            "brand": "AC" },
+    "PLA":            { "extMin": 190, "extMax": 230, "bedMin": 50,  "bedMax": 60,  "sku": "AHPLBK-101",  "brand": "AC" },
+    "PLA+":           { "extMin": 210, "extMax": 230, "bedMin": 45,  "bedMax": 60,  "sku": "AHPLPBK-102", "brand": "AC" },
+    "PLA High Speed": { "extMin": 190, "extMax": 230, "bedMin": 50,  "bedMax": 60,  "sku": "AHHSBK-103",  "brand": "AC" },
+    "PLA Glow":       { "extMin": 190, "extMax": 230, "bedMin": 50,  "bedMax": 60,  "sku": "",            "brand": "AC" },
+    "PLA Marble":     { "extMin": 200, "extMax": 230, "bedMin": 50,  "bedMax": 60,  "sku": "",            "brand": "AC" },
+    "PLA Matte":      { "extMin": 190, "extMax": 230, "bedMin": 55,  "bedMax": 65,  "sku": "HYGBK-102",   "brand": "AC" },
+    "PLA SE":         { "extMin": 190, "extMax": 230, "bedMin": 55,  "bedMax": 65,  "sku": "",            "brand": "AC" },
+    "PLA Silk":       { "extMin": 200, "extMax": 230, "bedMin": 55,  "bedMax": 65,  "sku": "AHSCWH-102",  "brand": "AC" },
+    "PETG":           { "extMin": 230, "extMax": 250, "bedMin": 70,  "bedMax": 90,  "sku": "",            "brand": "AC" },
+    "TPU":            { "extMin": 210, "extMax": 230, "bedMin": 0,   "bedMax": 0,   "sku": "STPBK-101",   "brand": "AC" }
+  }
+}

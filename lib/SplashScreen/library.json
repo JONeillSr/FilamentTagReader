@@ -1,0 +1,5 @@
+{
+  "name": "SplashScreen",
+  "version": "1.0.0",
+  "description": "Generic animated boot-splash for SSD1306 displays (logo-agnostic; bitmap supplied by the project)."
+}

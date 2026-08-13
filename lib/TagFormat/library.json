@@ -1,0 +1,12 @@
+{
+  "name": "TagFormat",
+  "version": "1.0.0",
+  "description": "Abstract filament-tag codec interface + registry, with per-standard implementations (Anycubic, OpenSpool). Lets the reader read/write multiple tag formats through one neutral FilamentRecord.",
+  "dependencies": {
+    "FilamentTag": "*",
+    "bblanchon/ArduinoJson": "^7.0.4"
+  },
+  "build": {
+    "flags": ["-I../FilamentTag"]
+  }
+}
