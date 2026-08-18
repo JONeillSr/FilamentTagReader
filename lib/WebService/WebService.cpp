@@ -5,6 +5,7 @@
 
 #include "WebService.h"
 #include <ElegantOTA.h>
+#include <time.h>   // log timestamps
 
 WebService::WebService(uint16_t port) : _server(port) {
     _logMutex = xSemaphoreCreateMutex();
@@ -12,17 +13,48 @@ WebService::WebService(uint16_t port) : _server(port) {
 
 // ---- remote log -------------------------------------------------------------
 
+// Timestamps are STORED as a UTC epoch and formatted only when the log is
+// rendered. Formatting at write time meant lines written before configTzTime()
+// applied the timezone stayed frozen in UTC while later ones were local -- the
+// log appeared to jump backwards partway down. Converting at the edge also means
+// changing the timezone immediately re-renders the whole buffer correctly.
+//
+// A line written before the clock was trustworthy shows uptime (`+12s`) rather
+// than a fabricated wall-clock time; the two forms are visually distinct so it
+// is obvious which you are reading.
+String WebService::formatStamp(const LogLine& l) {
+    char buf[16];
+    if (l.epoch > 1700000000UL) {
+        time_t t = (time_t)l.epoch;
+        struct tm tm;
+        localtime_r(&t, &tm);          // uses the timezone set NOW, not then
+        strftime(buf, sizeof(buf), "%H:%M:%S", &tm);
+    } else {
+        snprintf(buf, sizeof(buf), "+%lus", (unsigned long)(l.uptimeMs / 1000));
+    }
+    return String(buf);
+}
+
 void WebService::log(const String& line) {
-    Serial.println(line);                 // always echo to physical serial
+    time_t now = time(nullptr);
+
+    LogLine entry;
+    entry.epoch    = (now > 1700000000) ? (uint32_t)now : 0;
+    entry.uptimeMs = millis();
+    entry.text     = line;
+
+    String rendered = formatStamp(entry) + "  " + line;
+    Serial.println(rendered);             // always echo to physical serial
+
     if (!_logMutex) return;
     xSemaphoreTake(_logMutex, portMAX_DELAY);
-    _log[_logHead] = line;
+    _log[_logHead] = entry;
     _logHead = (_logHead + 1) % LOG_LINES;
     if (_logCount < LOG_LINES) _logCount++;
     // Live-push to a connected telnet client (under the same lock so writes
     // from different tasks don't interleave).
     if (_telnetClient && _telnetClient.connected()) {
-        _telnetClient.println(line);
+        _telnetClient.println(rendered);
     }
     xSemaphoreGive(_logMutex);
 }
@@ -71,7 +103,10 @@ String WebService::renderLog() {
     // Walk oldest -> newest.
     int start = (_logCount < LOG_LINES) ? 0 : _logHead;
     for (int i = 0; i < _logCount; i++) {
-        out += _log[(start + i) % LOG_LINES];
+        const LogLine& l = _log[(start + i) % LOG_LINES];
+        out += formatStamp(l);           // formatted now, in the current zone
+        out += "  ";
+        out += l.text;
         out += "\n";
     }
     xSemaphoreGive(_logMutex);
@@ -184,6 +219,39 @@ String WebService::statusBody() {
     if (_hostname.length())
         body += "mDNS:     " + _hostname + ".local\n";
     body += "Uptime:   " + String(millis() / 1000) + "s\n";
+
+    // Heap, including the LOW-WATER MARK since boot.
+    //
+    // The minimum is the number that matters and the reason this line exists.
+    // Current free heap only describes the instant you happened to look, so a
+    // device that dipped to 4 KB during a TLS handshake an hour ago looks
+    // perfectly healthy now. The low-water mark survives that spike, which means
+    // a unit can be interrogated after the fact instead of having to be caught
+    // in the act.
+    //
+    // Added after an offline test where six hours of failed syncs were
+    // observable in every respect EXCEPT the one that would reveal a leak --
+    // and repeated failed TLS handshakes are exactly where a leak would live.
+    //
+    // largest-free-block is the fragmentation check: a heap with plenty free but
+    // no contiguous run large enough will still fail an allocation, and a TLS
+    // context is a big one. "80 KB free" is not reassuring if the biggest block
+    // is 6 KB.
+    {
+        uint32_t freeNow = ESP.getFreeHeap();
+        uint32_t minEver = ESP.getMinFreeHeap();
+        uint32_t biggest = ESP.getMaxAllocHeap();
+        body += "Heap:     " + String(freeNow / 1024) + " KB free, min " +
+                String(minEver / 1024) + " KB since boot, largest block " +
+                String(biggest / 1024) + " KB";
+        // Thresholds are advisory, not alarms: a TLS handshake needs roughly
+        // 45 KB, so dropping near that is the point where syncing starts to fail
+        // before anything else looks wrong.
+        if (minEver < 20000)      body += "  [LOW - allocations may be failing]";
+        else if (minEver < 45000) body += "  [tight - TLS needs ~45 KB]";
+        body += "\n";
+    }
+
     if (_statusProvider) _statusProvider(body);
     return body;
 }
@@ -294,7 +362,8 @@ void WebService::serviceTelnet() {
             // re-take the same non-recursive mutex and deadlock).
             int start = (_logCount < LOG_LINES) ? 0 : _logHead;
             for (int i = 0; i < _logCount; i++) {
-                _telnetClient.println(_log[(start + i) % LOG_LINES]);
+                const LogLine& l = _log[(start + i) % LOG_LINES];
+                _telnetClient.println(formatStamp(l) + "  " + l.text);
             }
             _telnetGreeted = true;
             xSemaphoreGive(_logMutex);

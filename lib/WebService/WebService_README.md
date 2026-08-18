@@ -28,6 +28,22 @@ is called.
 The remote log is a ring buffer fed by `log()`, shared by `/webserial` and the
 telnet console, and echoed to `Serial`. `log()` is safe to call from any task.
 
+### Timestamps
+
+Each entry stores a **UTC epoch**, not a formatted string, and is rendered in
+whatever timezone is set at the moment you view it — canonical storage, convert
+at the edges.
+
+That matters because the timezone is applied by `configTzTime()` *after* boot.
+Formatting at write time froze early lines in UTC while later ones were local, so
+a log could read `00:52:39` followed by `20:52:48` — time apparently running
+backwards partway down. Storing the epoch also means changing the timezone
+re-renders the whole buffer correctly rather than only affecting new lines.
+
+Lines written before the clock was trustworthy render as uptime (`+12s`) rather
+than an invented wall-clock time. The two forms are visually distinct so it is
+obvious which you are reading.
+
 ## Quick start
 
 ```cpp
@@ -63,13 +79,37 @@ web.routes().on("/api/data", [](){ /* serve JSON */ });
 
 ## Project-specific status lines
 
-`/status` always shows WiFi IP, mDNS name, and uptime. Append your own lines:
+`/status` always shows WiFi IP, mDNS name, uptime and heap. Append your own:
 
 ```cpp
 web.setStatusProvider([](String& body){
     body += "Sensor:   " + String(reading) + "\n";
 });
 ```
+
+### The heap line
+
+```
+Heap:     131 KB free, min 69 KB since boot, largest block 49 KB
+```
+
+Three numbers because one is not enough:
+
+- **free** — only describes the instant you looked.
+- **min since boot** — the number that matters. A device that dipped to 4 KB
+  during a TLS handshake an hour ago looks perfectly healthy in the first figure.
+  The low-water mark survives that spike, so a unit can be interrogated after the
+  fact instead of having to be caught in the act.
+- **largest block** — the fragmentation check. A TLS context is a large single
+  allocation, so "131 KB free" is not reassuring when the biggest contiguous run
+  is 39 KB. Fragmentation makes allocations fail while the total still looks fine.
+
+Advisory markers appear below 45 KB (roughly what a TLS handshake needs) and
+below 20 KB. They are hints, not alarms.
+
+This exists because an offline test made six hours of failed syncs observable in
+every respect *except* the one that would reveal a leak — and repeated failed TLS
+handshakes are exactly where a leak would live.
 
 ---
 
